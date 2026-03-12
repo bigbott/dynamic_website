@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphone Store - Product Detail</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        #header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        #header h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        #header h1 a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        #header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        #header nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        
+        #header nav a:hover {
+            background-color: #34495e;
+        }
+        
+        #content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        
+        #footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        
+        #footer p {
+            margin: 0.5rem 0;
+        }
+        
+        #product-name {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        
+        #product-price {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        #product-description {
+            line-height: 1.8;
+            margin: 1rem 0;
+        }
+        
+        #product-specs {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+        
+        #product-specs li {
+            margin: 0.5rem 0;
+            padding-left: 1rem;
+            border-left: 3px solid #3498db;
+        }
+        
+        button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #219a52;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1><a href="http://localhost:8080">Smartphone Store</a></h1>
+        <nav>
+            <ul>
+                <li><a href="http://localhost:8080">Home</a></li>
+                <li><a href="http://localhost:8080/products">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="content">
+        <h2 id="product-name">Smartphone X</h2>
+        <p><strong>Price:</strong> <span id="product-price">$999</span></p>
+        <p><strong>Description:</strong> <span id="product-description">This smartphone features the latest processor, a 6.5-inch OLED display, and a triple-camera system. It is designed for power users who demand the best performance.</span></p>
+        <p><strong>Specs:</strong></p>
+        <ul id="product-specs">
+            <li id="spec-1">Processor: Octa-core 3.0 GHz</li>
+            <li id="spec-2">RAM: 12GB</li>
+            <li id="spec-3">Storage: 256GB</li>
+            <li id="spec-4">Battery: 4500mAh</li>
+        </ul>
+        <button>Add to Cart</button>
+    </div>
+
+    <div id="footer">
+        <p>&copy; 2026 Smartphone Store. All rights reserved.</p>
+        <p>123 Fake Street, Tech City, TC 90210</p>
+    </div>
+</body>
+</html>

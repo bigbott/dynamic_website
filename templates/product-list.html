@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphone Store - Products</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        #header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        #header h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        #header h1 a {
+            color: white;
+            text-decoration: none;
+            font-size: 2rem;
+        }
+        
+        #header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        #header nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        #header nav ul li a:hover {
+            background-color: #34495e;
+        }
+        
+        #content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-height: 400px;
+        }
+        
+        #footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        #footer p {
+            margin: 0.5rem 0;
+        }
+        
+        #product-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        #product-list li {
+            background-color: #f9f9f9;
+            margin: 1rem 0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        #product-list li h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        #product-list li p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        #product-list li a {
+            background-color: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        
+        #product-list li a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1><a href="http://localhost:8080">Smartphone Store</a></h1>
+        <nav>
+            <ul>
+                <li><a href="http://localhost:8080">Home</a></li>
+                <li><a href="http://localhost:8080/products">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="content">
+        <h2>Our Products</h2>
+        <ul id="product-list">
+            <li id="product-1">
+                <h3>Smartphone X</h3>
+                <p>High performance, stunning display.</p>
+                <a href="http://localhost:8080/products/1">View Details</a>
+            </li>
+            <li id="product-2">
+                <h3>Smartphone Y</h3>
+                <p>Long battery life, affordable price.</p>
+                <a href="http://localhost:8080/products/2">View Details</a>
+            </li>
+            <li id="product-3">
+                <h3>Smartphone Z</h3>
+                <p>The best camera on the market.</p>
+                <a href="http://localhost:8080/products/3">View Details</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="footer">
+        <p>&copy; 2026 Smartphone Store. All rights reserved.</p>
+        <p>123 Fake Street, Tech City, TC 90210</p>
+    </div>
+</body>
+</html>

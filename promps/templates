@@ -1,0 +1,35 @@
+Generate three HTML templates 
+for e-commerce site prototype which sells smartphones.
+home.html
+product-list.html
+product-detail.html
+
+Each template should have the structure: 
+<body>
+    <div id="header"></div>
+
+
+    <div id="content"></div>
+
+    <div id="footer"></div>
+</body>
+
+the header and footer should be the same across all templates.
+The header should contain a site name with link to home page and a navigation bar
+with following links: 
+Home
+Products
+About
+Contact
+Home link should link to home page. (localhost:8080).
+Products link should link to product list page (localhost:8080/products).
+About and Contact links just empty. 
+
+The footer should be the same for each template and contain copyright notice
+and other information about the site. Just fake it. 
+
+The content should be different for each template.
+
+For the Home page just a greeting message. 
+For the Product list page just a list of products. 
+For the Product detail page just a description of the product.
