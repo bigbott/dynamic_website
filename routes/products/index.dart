@@ -1,6 +1,13 @@
+import 'dart:io';
+
 import 'package:dart_frog/dart_frog.dart';
+import 'package:dynamic_website/templates/html_templates.dart';
 
 Response onRequest(RequestContext context) {
-  // TODO: implement route handler
-  return Response(body: 'This is a new route /products');
+  return Response(
+    body: HtmlTemplates.pathToHtml[HtmlTemplates.productList],
+    headers: {
+      HttpHeaders.contentTypeHeader: ContentType.html.value,
+    },
+  );
 }

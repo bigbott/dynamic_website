@@ -1,17 +1,30 @@
-
 import 'dart:io';
 
 import 'package:dart_frog/dart_frog.dart';
+import 'package:dynamic_website/presentation/home_view.dart';
+import 'package:dynamic_website/presentation/product_details_view.dart';
+import 'package:dynamic_website/presentation/product_list_view.dart';
+import 'package:dynamic_website/templates/html_templates.dart';
 
 Future<void> init(InternetAddress ip, int port) async {
-  // Any code initialized within this method will only run on server start, any hot reloads
-  // afterwards will not trigger this method until a hot restart.
+  // HtmlTemplates.pathToHtml[HtmlTemplates.home] =
+  //     await File(HtmlTemplates.home).readAsString();
+  // HtmlTemplates.pathToHtml[HtmlTemplates.productList] =
+  //     await File(HtmlTemplates.productList).readAsString();
+  // HtmlTemplates.pathToHtml[HtmlTemplates.productDetail] =
+  //     await File(HtmlTemplates.productDetail).readAsString();
+
+  // print('HTML templates loaded successfully!');
+
+  final futures = <Future<void>>[
+    HomeView.parseHtml(),
+    ProductListView.parseHtml(),
+    ProductDetailsView.parseHtml(),
+  ];
+  await Future.wait(futures);
+  print('HTML templates parsed successfully!');
 }
 
 Future<HttpServer> run(Handler handler, InternetAddress ip, int port) {
-  // 1. Execute any custom code prior to starting the server...
-
-  // 2. Use the provided `handler`, `ip`, and `port` to create a custom `HttpServer`.
-  // Or use the Dart Frog serve method to do that for you.
   return serve(handler, ip, port);
 }
