@@ -15,6 +15,6 @@ class Product {
    String name;
    double price;
    String description;
-   Map<String, String> specs;
+   List<String> specs;
 
 }
